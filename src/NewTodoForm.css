@@ -1,0 +1,22 @@
+.NewTodoForm {
+  display: flex;
+  justify-content: center;
+  width: 20vw;
+}
+
+.NewTodoForm button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.NewTodoForm i {
+  font-size: 2rem;
+  color: lightblue;
+  text-shadow: 2px 2px 2px black;
+}
+
+.NewTodoForm i:active {
+  text-shadow: none;
+  transform: translate(2px, 2px);
+}

@@ -1,0 +1,25 @@
+.Todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  color: lightblue;
+  background: purple;
+  box-shadow: 2px 2px 5px #333;
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+
+.Todo-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+.Todo-remove,
+.Todo-edit {
+  color: lightblue;
+  font-size: 2rem;
+}
