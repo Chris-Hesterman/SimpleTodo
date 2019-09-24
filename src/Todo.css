@@ -6,7 +6,7 @@
   margin-bottom: 10px;
   border: 1px solid black;
   color: lightblue;
-  background: purple;
+  background: slateblue;
   box-shadow: 2px 2px 5px #333;
   border-radius: 5px;
   padding: 0 1rem;
@@ -32,7 +32,7 @@
   margin-bottom: 10px;
   border: 1px solid black;
   color: lightgreen;
-  background: purple;
+  background: slateblue;
   box-shadow: 2px 2px 5px #333;
   border-radius: 5px;
   padding: 0 1rem;
@@ -52,7 +52,7 @@
 
 .Todo-editForm button {
   outline: none;
-  background: purple;
+  background: slateblue;
   color: lightblue;
   border: 3px solid lightblue;
   border-radius: 5px;

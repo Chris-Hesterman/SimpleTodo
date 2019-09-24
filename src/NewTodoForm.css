@@ -1,6 +1,6 @@
 .NewTodoForm {
   display: flex;
-  background: purple;
+  background: slateblue;
   justify-content: space-between;
   align-items: center;
   color: lightblue;
@@ -20,7 +20,9 @@
 
 .NewTodoForm input {
   border: none;
+  background: lightblue;
   font-size: 1.4rem;
+  outline: none;
   width: 50%;
 }
 
