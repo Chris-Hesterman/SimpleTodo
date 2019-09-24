@@ -16,7 +16,6 @@ class Todo extends Component {
   componentDidMount() {
     const task = this.props.todo.task;
     this.setState({ task });
-    console.log(this.props.todo);
   }
   handleClick(e) {
     console.log(e.target.className)
