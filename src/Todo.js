@@ -19,7 +19,8 @@ class Todo extends Component {
     console.log(this.props.todo);
   }
   handleClick(e) {
-    e.target.className === 'Todo-remove'
+    console.log(e.target.className)
+    e.target.className.includes('Todo-remove')
       ? this.props.remove(this.props.todo.id)
       : this.setState({ edit: true });
   }
@@ -54,11 +55,13 @@ class Todo extends Component {
       <div className="Todo">
         <h1>{this.props.todo.task}</h1>
         <div className="Todo-btns">
+          <i onClick={this.handleClick} 
+          className="Todo-edit far fa-edit" 
+          />
           <i
             onClick={this.handleClick}
             className="Todo-remove far fa-trash-alt"
-          />
-          <i onClick={this.handleClick} className="Todo-edit far fa-edit" />
+          />  
         </div>
       </div>
     );

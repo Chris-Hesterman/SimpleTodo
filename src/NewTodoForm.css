@@ -1,13 +1,27 @@
 .NewTodoForm {
   display: flex;
-  justify-content: center;
-  width: 20vw;
+  background: purple;
+  justify-content: space-between;
+  align-items: center;
+  color: lightblue;
+  font-size: 1.5rem;
+  width: 30vw;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding-left: .4rem;
+  box-shadow: 2px 2px 5px #333;
 }
 
 .NewTodoForm button {
   background: none;
   border: none;
   outline: none;
+}
+
+.NewTodoForm input {
+  border: none;
+  font-size: 1.4rem;
+  width: 50%;
 }
 
 .NewTodoForm i {

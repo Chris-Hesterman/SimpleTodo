@@ -14,7 +14,7 @@
 
 .Todo-btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 20%;
 }
@@ -22,4 +22,39 @@
 .Todo-edit {
   color: lightblue;
   font-size: 2rem;
+}
+
+.Todo-editForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  color: lightgreen;
+  background: purple;
+  box-shadow: 2px 2px 5px #333;
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+
+.Todo-editForm label {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.Todo-editForm input {
+  width: 50%;
+  font-size: 2rem;
+  background: lightblue;
+  border: none;
+}
+
+.Todo-editForm button {
+  outline: none;
+  background: purple;
+  color: lightblue;
+  border: 3px solid lightblue;
+  border-radius: 5px;
+  font-size: 1.75rem;
 }
