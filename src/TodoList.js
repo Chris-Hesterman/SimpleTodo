@@ -22,8 +22,8 @@ export default class TodoList extends Component {
     }));
   }
 
-  editTodo(todo) {
-    this.setState((state) => ({ todos: [...state.todos, todo] }));
+  editTodo(editedTodo) {
+    this.setState((state) => ({ todos: [...state.todos, editedTodo] }));
   }
 
   removeTodo(id) {
@@ -32,17 +32,20 @@ export default class TodoList extends Component {
   }
 
   render() {
-    const todoListItem = this.state.todos.map((todo) => {
+    const todoListItems = this.state.todos.map((todo) => {
       return (
-        <li key={todo.id}>
-          <Todo todo={todo} remove={this.removeTodo} edit={this.editTodo} />
-        </li>
+        <Todo 
+          key={todo.id} 
+          todo={todo} 
+          remove={this.removeTodo} 
+          edit={this.editTodo} 
+        />
       );
     });
     return (
       <div className="TodoList">
         <h1>FUGLY TODO LIST </h1>
-        <ul className="TodoList-list">{todoListItem}</ul>
+        <ul className="TodoList-list">{todoListItems}</ul>
         <NewTodoForm addTodo={this.addTodo} />
       </div>
     );

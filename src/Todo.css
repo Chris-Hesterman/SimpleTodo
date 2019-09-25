@@ -19,9 +19,14 @@
   width: 20%;
 }
 .Todo-remove,
-.Todo-edit {
+.Todo-edit,
+.Todo-complete {
   color: lightblue;
   font-size: 2rem;
+}
+
+.Todo-done {
+  text-decoration: line-through;
 }
 
 .Todo-editForm {

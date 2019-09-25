@@ -6,27 +6,28 @@ class Todo extends Component {
     super(props);
     this.state = {
       edit: false,
-      task: ''
+      task: this.props.todo.task,
+      done: false
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    const task = this.props.todo.task;
-    this.setState({ task });
-  }
   handleClick(e) {
     console.log(e.target.className)
-    e.target.className.includes('Todo-remove')
-      ? this.props.remove(this.props.todo.id)
-      : this.setState({ edit: true });
+    if (e.target.className.includes('Todo-edit')) {
+      this.setState({ edit: true });
+    } else if (e.target.className.includes('Todo-complete')) {
+      this.setState(prevState => ({ done: !prevState.done }));
+    } else {
+      this.props.remove(this.props.todo.id);
+    }
   }
 
   handleChange(e) {
     const val = e.target.value;
-    this.setState((state) => ({ task: val }));
+    this.setState({ task: val });
   }
 
   handleSubmit(e) {
@@ -50,9 +51,9 @@ class Todo extends Component {
         <button>Submit</button>
       </form>
     );
-    const todoList = (
+    const todoListItem = (
       <div className="Todo">
-        <h1>{this.props.todo.task}</h1>
+        {this.state.done ? <h1 className="Todo-done">{this.props.todo.task}</h1>:<h1>{this.props.todo.task}</h1>}
         <div className="Todo-btns">
           <i onClick={this.handleClick} 
           className="Todo-edit far fa-edit" 
@@ -61,10 +62,14 @@ class Todo extends Component {
             onClick={this.handleClick}
             className="Todo-remove far fa-trash-alt"
           />  
+          <i
+            onClick={this.handleClick}
+            className="Todo-complete far fa-check-circle"
+          />  
         </div>
       </div>
     );
-    return this.state.edit ? editTodo : todoList;
+    return this.state.edit ? editTodo : todoListItem;
   }
 }
 
