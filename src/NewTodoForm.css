@@ -12,10 +12,11 @@
   box-shadow: 2px 2px 5px #333;
 }
 
-.NewTodoForm button {
+.NewTodoForm-submit {
   background: none;
   border: none;
   outline: none;
+  align-items: center;
 }
 
 .NewTodoForm input {
@@ -34,5 +35,22 @@
 
 .NewTodoForm i:active {
   text-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+.clearTodoList {
+  font-size: .9rem;
+  background: slateblue;
+  color: lightblue;
+  border: 3px solid lightblue;
+  border-radius: 5px;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 2px 2px 2px black;
+  margin: 0 5px 0 0;
+  outline: none;
+}
+
+.clearTodoList:active {
+  box-shadow: none;
   transform: translate(2px, 2px);
 }

@@ -1,6 +1,7 @@
 .TodoList {
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 30px;

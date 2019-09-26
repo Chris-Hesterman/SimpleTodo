@@ -9,6 +9,7 @@ class NewTodoForm extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClear = this.handleClear.bind(this);
   }
 
   handleChange(e) {
@@ -23,10 +24,14 @@ class NewTodoForm extends Component {
     }
   }
 
+  handleClear(e) {
+    this.props.clearTodos();
+  }
+
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit} className="NewTodoForm">
+      <div >
+        <form className="NewTodoForm" onSubmit={this.handleSubmit}>
           <label htmlFor="task">Add New: </label>
           <input
             id="task"
@@ -37,10 +42,12 @@ class NewTodoForm extends Component {
             onChange={this.handleChange}
             autoFocus
           />
-          <button>
-            <i className="far fa-plus-square" />
+          <button className="NewTodoForm-submit">
+            <i type="submit" className="far fa-plus-square" />
           </button>
+          <button type="button" className="clearTodoList" onClick={this.handleClear}>CLEAR</button>
         </form>
+        
       </div>
     );
   }

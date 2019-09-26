@@ -15,7 +15,6 @@ class Todo extends Component {
   }
 
   handleClick(e) {
-    console.log(e.target.className)
     if (e.target.className.includes('Todo-edit')) {
       this.setState({ edit: true });
     } else if (e.target.className.includes('Todo-complete')) {
