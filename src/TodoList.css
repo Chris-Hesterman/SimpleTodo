@@ -25,3 +25,9 @@
   width: 80%;
   list-style-type: none;
 }
+
+@media (max-width: 1320px) {
+  .TodoList-list {
+    width: 90%;
+  }
+}

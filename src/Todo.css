@@ -17,12 +17,14 @@
   justify-content: space-around;
   align-items: center;
   width: 20%;
+  
 }
 .Todo-remove,
 .Todo-edit,
 .Todo-complete {
   color: lightblue;
   font-size: 2rem;
+  margin-left: 3px;
 }
 
 .Todo-done {
@@ -62,4 +64,10 @@
   border: 3px solid lightblue;
   border-radius: 5px;
   font-size: 1.75rem;
+}
+
+@media (max-width: 1024px) {
+  .Todo h1 {
+    font-size: 1.5em;
+  }
 }

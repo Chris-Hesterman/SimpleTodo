@@ -5,11 +5,14 @@
   align-items: center;
   color: lightblue;
   font-size: 1.5rem;
-  width: 30vw;
   border: 1px black solid;
   border-radius: 5px;
   padding-left: .4rem;
   box-shadow: 2px 2px 5px #333;
+}
+
+.NewTodoForm-container {
+  width: 70%;
 }
 
 .NewTodoForm-submit {
@@ -53,4 +56,13 @@
 .clearTodoList:active {
   box-shadow: none;
   transform: translate(2px, 2px);
+}
+
+@media (max-width: 1320px) {
+  .NewTodoForm-container {
+    width: 90%;
+  }
+  .NewTodoForm label {
+    font-size: 1.3rem;
+  }
 }

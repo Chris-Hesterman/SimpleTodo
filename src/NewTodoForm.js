@@ -30,7 +30,7 @@ class NewTodoForm extends Component {
 
   render() {
     return (
-      <div >
+      <div className="NewTodoForm-container">
         <form className="NewTodoForm" onSubmit={this.handleSubmit}>
           <label htmlFor="task">Add New: </label>
           <input
