@@ -18,12 +18,13 @@ class NewTodoForm extends Component {
   }
 
   handleSubmit(e) {
+    console.log(e);
     e.preventDefault();
     if (this.state.task) {
       this.props.addTodo(this.state.task);
       this.setState({ task: '' });
-      if (window.innerWidth() < 1024) {
-        this.mobile.blur();
+      if (window.innerWidth < 1024) {
+        this.mobile.current.blur(); 
       }
     }
   }
