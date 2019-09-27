@@ -56,10 +56,9 @@
 
 @media (max-width: 548px) {
   .TodoList {
-    height: 100vh;
+    height: 100%;
     margin: 0;
-    width: 100vw;
-    
+    width: 100vw; 
   }
   .TodoList-list {
     width: 95%;
