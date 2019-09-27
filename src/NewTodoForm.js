@@ -7,6 +7,7 @@ class NewTodoForm extends Component {
     this.state = {
       task: ''
     };
+    this.mobile = React.createRef();
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClear = this.handleClear.bind(this);
@@ -21,6 +22,9 @@ class NewTodoForm extends Component {
     if (this.state.task) {
       this.props.addTodo(this.state.task);
       this.setState({ task: '' });
+      if (window.innerWidth() < 1024) {
+        this.mobile.blur();
+      }
     }
   }
 
@@ -38,6 +42,7 @@ class NewTodoForm extends Component {
             type="text"
             name="task"
             placeholder="Enter task"
+            ref={this.mobile}
             value={this.state.task}
             onChange={this.handleChange}
             autoFocus
