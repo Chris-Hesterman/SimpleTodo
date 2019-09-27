@@ -4,7 +4,6 @@ html {
 }
 body {
   background: #222;
-  
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -17,4 +16,5 @@ body {
           flex-direction: column;
   height: 100%;
   margin: 0;
+  padding: 0;
 }
