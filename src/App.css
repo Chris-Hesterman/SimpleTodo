@@ -4,9 +4,6 @@ html {
 }
 body {
   background: #222;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,13 +11,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0; 
 }
 
+#root {
+  height: 100%;
+  width: 100%;
+}
 .AppContainer {
-  margin: 0;
-  padding: 0;
-  height: 100%
+  height: 100%;
 }

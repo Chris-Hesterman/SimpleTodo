@@ -19,8 +19,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 80vh;
-  margin-top: 50px;
+  height: 70vh;
+  /* margin-top: 50px; */
   width: 50vw;  
 }
 
@@ -55,9 +55,9 @@
 
 @media (max-width: 548px) {
   .TodoList {
-    height: 100vh;
-    margin: 0;
-    width: 100vw; 
+    border: none;
+    height: 100%;
+    width: 100%;
   }
   .TodoList-list {
     width: 95%;
