@@ -1,18 +1,28 @@
 .TodoList {
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 30px;
-  min-height: 80vh;
-  margin-top: 50px;
-  width: 50vw;
-  background: #2980b9;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #2980b9;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#2c3e50), to(#2980b9));
+  background: -o-linear-gradient(left, #2c3e50, #2980b9);
   background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: 1px solid black;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: sans-serif;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 80vh;
+  margin-top: 50px;
+  padding-bottom: 30px;
+  width: 50vw;  
 }
 
 .TodoList h1 {
@@ -21,13 +31,37 @@
 }
 
 .TodoList-list {
-  padding: 0;
-  width: 80%;
   list-style-type: none;
+  padding: 0;
+  width: 80%; 
 }
 
 @media (max-width: 1320px) {
+  .TodoList {
+    width: 70vw;
+  }
   .TodoList-list {
     width: 90%;
+  }
+}
+
+@media (max-width: 762px) {
+  .TodoList {
+    width: 90vw;
+  }
+  .TodoList-list {
+    width: 90%;
+  }
+}
+
+@media (max-width: 548px) {
+  .TodoList {
+    height: 100vh;
+    margin-top: 0;
+    width: 100vw;
+    
+  }
+  .TodoList-list {
+    width: 95%;
   }
 }

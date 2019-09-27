@@ -1,14 +1,21 @@
 .NewTodoForm {
-  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: slateblue;
-  justify-content: space-between;
-  align-items: center;
-  color: lightblue;
-  font-size: 1.5rem;
   border: 1px black solid;
   border-radius: 5px;
-  padding-left: .4rem;
-  box-shadow: 2px 2px 5px #333;
+  -webkit-box-shadow: 2px 2px 5px #333;
+          box-shadow: 2px 2px 5px #333;
+  color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: .4rem; 
 }
 
 .NewTodoForm-container {
@@ -16,46 +23,54 @@
 }
 
 .NewTodoForm-submit {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: none;
   border: none;
   outline: none;
-  align-items: center;
 }
 
 .NewTodoForm input {
-  border: none;
   background: lightblue;
+  border: none;
   font-size: 1.4rem;
   outline: none;
   width: 50%;
 }
 
 .NewTodoForm i {
-  font-size: 2rem;
   color: lightblue;
+  font-size: 2rem;
   text-shadow: 2px 2px 2px black;
 }
 
 .NewTodoForm i:active {
   text-shadow: none;
-  transform: translate(2px, 2px);
+  -webkit-transform: translate(2px, 2px);
+      -ms-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
 }
 
 .clearTodoList {
-  font-size: .9rem;
   background: slateblue;
   color: lightblue;
   border: 3px solid lightblue;
   border-radius: 5px;
-  text-shadow: 1px 1px 1px black;
-  box-shadow: 2px 2px 2px black;
+  -webkit-box-shadow: 2px 2px 2px black;
+          box-shadow: 2px 2px 2px black;
+  font-size: .9rem;
   margin: 0 5px 0 0;
   outline: none;
+  text-shadow: 1px 1px 1px black;
 }
 
 .clearTodoList:active {
-  box-shadow: none;
-  transform: translate(2px, 2px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate(2px, 2px);
+      -ms-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
 }
 
 @media (max-width: 1320px) {
@@ -64,5 +79,29 @@
   }
   .NewTodoForm label {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 548px) {
+  .NewTodoForm-container {
+    padding-bottom: 10px;
+    width: 95vw;
+  }
+  .NewTodoForm {
+    padding-bottom: 3px;
+    padding-top: 3px; 
+  }
+  .NewTodoForm label {
+    display: none;
+  }
+  .NewTodoForm input {
+    width: 65%;
+  }
+  .NewTodoForm i {
+    font-size: 1.5rem;
+  }
+  .clearTodoList {
+    border: 2px solid lightblue;
+    font-size: .7rem; 
   }
 }

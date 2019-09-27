@@ -1,30 +1,43 @@
 .Todo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  margin-bottom: 10px;
-  border: 1px solid black;
-  color: lightblue;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: slateblue;
-  box-shadow: 2px 2px 5px #333;
+  border: 1px solid black;
   border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px #333;
+          box-shadow: 2px 2px 5px #333;
+  color: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
   padding: 0 1rem;
 }
 
 .Todo-btns {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 20%;
-  
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 5px;
+  width: 20%; 
 }
+
 .Todo-remove,
 .Todo-edit,
 .Todo-complete {
   color: lightblue;
   font-size: 2rem;
-  margin-left: 3px;
+  margin-left: 10px;
 }
 
 .Todo-done {
@@ -32,16 +45,23 @@
 }
 
 .Todo-editForm {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  margin-bottom: 10px;
-  border: 1px solid black;
-  color: lightgreen;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: slateblue;
-  box-shadow: 2px 2px 5px #333;
+  border: 1px solid black;
   border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 5px #333;
+          box-shadow: 2px 2px 5px #333;
+  color: lightgreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
   padding: 0 1rem;
 }
 
@@ -51,23 +71,48 @@
 }
 
 .Todo-editForm input {
-  width: 50%;
-  font-size: 2rem;
   background: lightblue;
   border: none;
+  font-size: 2rem;
+  width: 50%;
 }
 
 .Todo-editForm button {
-  outline: none;
-  background: slateblue;
-  color: lightblue;
+  
   border: 3px solid lightblue;
+  background: slateblue;
   border-radius: 5px;
+  color: lightblue;
   font-size: 1.75rem;
+  outline: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .Todo h1 {
     font-size: 1.5em;
+  }
+  .Todo-remove,
+  .Todo-edit,
+  .Todo-complete {
+    font-size: 1.75rem;
+    margin-left: 15px;
+  }
+  .Todo-btns {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 548px) {
+  .Todo {
+    padding: 0 .5rem;
+  }
+  .Todo-remove,
+  .Todo-edit,
+  .Todo-complete {
+    font-size: 1.6rem;
+    margin-left: 5px;
+  }
+  .Todo-btns {
+    margin-right: 1rem;
   }
 }
