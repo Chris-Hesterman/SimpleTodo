@@ -50,7 +50,7 @@ export default class TodoList extends Component {
     });
     return (
       <div className="TodoList">
-        <h1>FUGLY TODO LIST </h1>
+        <h1>SIMPLE TODO LIST </h1>
         <ul className="TodoList-list">{todoListItems}</ul>
         <NewTodoForm addTodo={this.addTodo} clearTodos={this.clearTodos}/>
       </div>
