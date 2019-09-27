@@ -9,7 +9,7 @@ class NewTodoForm extends Component {
     };
     this.mobile = React.createRef();
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit= this.handleSubmit.bind(this);
     this.handleClear = this.handleClear.bind(this);
   }
 
@@ -18,7 +18,7 @@ class NewTodoForm extends Component {
   }
 
   handleSubmit(e) {
-    console.log(e);
+    console.log(e.which);
     e.preventDefault();
     if (this.state.task) {
       this.props.addTodo(this.state.task);
@@ -48,8 +48,8 @@ class NewTodoForm extends Component {
             onChange={this.handleChange}
             autoFocus
           />
-          <button className="NewTodoForm-submit">
-            <i type="submit" className="far fa-plus-square" />
+          <button type="Submit" onSubmit={this.handleSubmit} className="NewTodoForm-submit">
+            <i className="far fa-plus-square" />
           </button>
           <button type="button" className="clearTodoList" onClick={this.handleClear}>CLEAR</button>
         </form>
