@@ -10,6 +10,7 @@ export default class TodoList extends Component {
     this.state = {
       todos: []
     };
+    this.todoList = React.createRef();
     this.addTodo = this.addTodo.bind(this);
     this.editTodo = this.editTodo.bind(this);
     this.removeTodo = this.removeTodo.bind(this);
@@ -36,6 +37,11 @@ export default class TodoList extends Component {
     this.setState({ todos: [] });
   }
 
+  componentDidMount() {
+    console.log('ok');
+    this.todoList.current.scrollTop = 0;
+  }
+
   render() {
     const todoListItems = this.state.todos.map((todo) => {
       return (
@@ -49,7 +55,7 @@ export default class TodoList extends Component {
       );
     });
     return (
-      <div className="TodoList">
+      <div className="TodoList" ref={this.todoList}>
         <h1>SIMPLE TODO LIST </h1>
         <ul className="TodoList-list">{todoListItems}</ul>
         <NewTodoForm addTodo={this.addTodo} clearTodos={this.clearTodos}/>
