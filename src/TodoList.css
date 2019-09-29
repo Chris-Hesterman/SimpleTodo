@@ -1,10 +1,7 @@
 .TodoList {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #2980b9;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#2c3e50), to(#2980b9));
   background: -o-linear-gradient(left, #2c3e50, #2980b9);
+  background: -webkit-gradient(linear, left top, right top, from(#2c3e50), to(#2980b9));
   background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: 1px solid black;
   border-radius: 10px;
@@ -15,12 +12,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: sans-serif;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  font-family: sans-serif;
   height: 70vh;
-  /* margin-top: 50px; */
   width: 50vw;  
 }
 

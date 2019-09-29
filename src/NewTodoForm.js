@@ -52,8 +52,7 @@ class NewTodoForm extends Component {
             <i className="far fa-plus-square" />
           </button>
           <button type="button" className="clearTodoList" onClick={this.handleClear}>CLEAR</button>
-        </form>
-        
+        </form> 
       </div>
     );
   }
