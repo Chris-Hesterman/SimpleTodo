@@ -53,18 +53,10 @@ class Todo extends Component {
     const todoListItem = (
       <div className="Todo">
         {this.state.done ? <h1 className="Todo-done">{this.props.todo.task}</h1>:<h1>{this.props.todo.task}</h1>}
-        <div className="Todo-btns">
-          <i onClick={this.handleClick} 
-          className="Todo-edit far fa-edit" 
-          />
-          <i
-            onClick={this.handleClick}
-            className="Todo-remove far fa-trash-alt"
-          />  
-          <i
-            onClick={this.handleClick}
-            className="Todo-complete far fa-check-circle"
-          />  
+        <div onClick = {this.handleClick} className="Todo-btns">
+          <i className="Todo-edit far fa-edit"/>
+          <i className="Todo-remove far fa-trash-alt"/>  
+          <i className="Todo-complete far fa-check-circle"/>  
         </div>
       </div>
     );
